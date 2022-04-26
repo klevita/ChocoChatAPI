@@ -29,10 +29,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors(MyAllowSpecificOrigins);
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
 
 app.MapGet("/GetMoney", ()=>
 {
@@ -78,10 +74,7 @@ app.MapGet("/GetMoney", ()=>
 
 app.Run();
 
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+
 public class Coin : IEquatable<Coin>
 {
     public string CoinName { get; set; }
@@ -111,5 +104,13 @@ public class Coin : IEquatable<Coin>
     {
         if (other == null) return false;
         return (this.CoinId.Equals(other.CoinId));
-    }
 };
+
+public class User
+{
+    public string Login { get; set; }
+    public string Email { get; set; }
+    public int Id { get; set; }
+    public bool FIO { get; set; }
+    public string position { get; set; }
+}
