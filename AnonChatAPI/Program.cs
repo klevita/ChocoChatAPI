@@ -112,5 +112,5 @@ public class User
     public string Email { get; set; }
     public int Id { get; set; }
     public bool FIO { get; set; }
-    public string position { get; set; }
+    public string Proffession_Name { get; set; }
 }
