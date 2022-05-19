@@ -68,7 +68,7 @@ app.MapGet("/GetMoney", ()=>
     coins[3].CoinId = 4;
     coins[4].CoinId = 5;
     coins[5].CoinId = 6;
-    return 0;
+    return coins[5].CoinName;
 })
 .WithName("GetBinanceCoins");
 
@@ -104,13 +104,13 @@ public class Coin : IEquatable<Coin>
     {
         if (other == null) return false;
         return (this.CoinId.Equals(other.CoinId));
-};
+    }
 
-public class User
-{
-    public string Login { get; set; }
-    public string Email { get; set; }
-    public int Id { get; set; }
-    public bool FIO { get; set; }
-    public string Proffession_Name { get; set; }
-}
+    public class User
+    {
+        public string Login { get; set; }
+        public string Email { get; set; }
+        public int Id { get; set; }
+        public bool FIO { get; set; }
+        public string Proffession_Name { get; set; }
+    } }

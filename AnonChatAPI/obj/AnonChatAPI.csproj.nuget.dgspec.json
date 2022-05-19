@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {}
+    "C:\\Users\\slava\\VS code progs\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {
+    "C:\\Users\\slava\\VS code progs\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+        "projectUniqueName": "C:\\Users\\slava\\VS code progs\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
         "projectName": "AnonChatAPI",
-        "projectPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
-        "packagesPath": "C:\\Users\\klevi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\obj\\",
+        "projectPath": "C:\\Users\\slava\\VS code progs\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+        "packagesPath": "C:\\Users\\slava\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slava\\VS code progs\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\klevi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slava\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
