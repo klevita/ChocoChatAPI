@@ -25,3 +25,30 @@ C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\obj\Debug\net6.0\refint\Anon
 C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.pdb
 C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.genruntimeconfig.cache
 C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\obj\Debug\net6.0\ref\AnonChatAPI.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.csproj.AssemblyReference.cache
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.AssemblyInfoInputs.cache
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.AssemblyInfo.cs
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.csproj.CoreCompileInputs.cache
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\refint\AnonChatAPI.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.pdb
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\appsettings.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\AnonChatAPI.exe
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\AnonChatAPI.deps.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\AnonChatAPI.runtimeconfig.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\AnonChatAPI.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\AnonChatAPI.pdb
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\scopedcss\bundle\AnonChatAPI.styles.css
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.csproj.CopyComplete
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.genruntimeconfig.cache
+C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\ref\AnonChatAPI.dll
