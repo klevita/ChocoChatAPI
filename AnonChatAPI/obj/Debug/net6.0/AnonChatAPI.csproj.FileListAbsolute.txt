@@ -52,3 +52,19 @@ C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.
 C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.csproj.CopyComplete
 C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\AnonChatAPI.genruntimeconfig.cache
 C:\Users\slava\VS code progs\sharp_proj\ChocoChatAPI\AnonChatAPI\obj\Debug\net6.0\ref\AnonChatAPI.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\DnsClient.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\linux\native\libsnappy64.so
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\linux\native\libzstd.so
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\osx\native\libsnappy64.dylib
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\osx\native\libzstd.dylib
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\win\native\libzstd.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\win\native\snappy32.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\win\native\snappy64.dll
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\klevi\source\repos\AnonChatAPI\AnonChatAPI\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll

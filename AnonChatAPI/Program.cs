@@ -1,7 +1,9 @@
+using AnonChatAPI.Models;
+using AnonChatAPI.Services;
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -16,7 +18,10 @@ builder.Services.AddCors(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.Configure<mushroomsDBSettings>(
+    builder.Configuration.GetSection("mushroomsDB")
+    );
+builder.Services.AddSingleton<UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,13 +32,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 app.UseCors(MyAllowSpecificOrigins);
 
 
-app.MapGet("/GetMoney", ()=>
+app.MapGet("/PostMoney", () =>
 {
     List<Coin> coins = new List<Coin>();
-    
+
     coins.Add(new Coin());
     coins.Add(new Coin());
     coins.Add(new Coin());
@@ -49,7 +55,7 @@ app.MapGet("/GetMoney", ()=>
     coins[5].CoinName = "coin555555555555555 5";
 
     coins[0].CoinValue = 100;
-    coins[1].CoinValue =200;
+    coins[1].CoinValue = 200;
     coins[2].CoinValue = 4000;
     coins[3].CoinValue = 50000000;
     coins[4].CoinValue = 3;
@@ -68,9 +74,8 @@ app.MapGet("/GetMoney", ()=>
     coins[3].CoinId = 4;
     coins[4].CoinId = 5;
     coins[5].CoinId = 6;
-    return coins[5].CoinName;
-})
-.WithName("GetBinanceCoins");
+    return coins;
+});
 
 app.Run();
 
