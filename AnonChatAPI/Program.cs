@@ -119,3 +119,11 @@ public class Coin : IEquatable<Coin>
         public bool FIO { get; set; }
         public string Proffession_Name { get; set; }
     } }
+
+// Добавить функции
+//CreateUser(email, password, NickName) return (true\"error message")
+//GetUser(email, password) return (User)
+//getUserPosts(userID) return ([Messages])
+//getUserForums(userID) return ([Forums])
+//getAllForums() return ([Forums])
+//getForumsByTag(TagName) return ([Forums])

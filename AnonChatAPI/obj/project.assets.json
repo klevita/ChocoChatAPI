@@ -908,19 +908,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\klevi\\.nuget\\packages\\": {}
+    "C:\\Users\\djeda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+      "projectUniqueName": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
       "projectName": "AnonChatAPI",
-      "projectPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
-      "packagesPath": "C:\\Users\\klevi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\AnonChatAPI\\obj\\",
+      "projectPath": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+      "packagesPath": "C:\\Users\\djeda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\klevi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\djeda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -977,7 +977,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
