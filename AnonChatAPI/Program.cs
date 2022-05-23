@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<mushroomsDBSettings>(
-    builder.Configuration.GetSection("mushroomsDB")
+    builder.Configuration.GetSection("mushrooms")
     );
 builder.Services.AddSingleton<UserService>();
 var app = builder.Build();
