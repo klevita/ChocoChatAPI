@@ -29,13 +29,26 @@ public class UserController : ControllerBase
 
         return user;
     }
+    [HttpGet("{name}")]
+    public async Task<ActionResult<User>> GetName(string name)
+    {
+        var user = await _userService.GettAsync(name);
+
+        if (user is null)
+        {
+            return NotFound();
+        }
+
+        return user;
+    }
 
     [HttpPost]
     public async Task<IActionResult> Post(User newUser)
     {
         await _userService.CreateAsync(newUser);
-
         return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
+
+
     }
 
     [HttpPut("{id:length(24)}")]

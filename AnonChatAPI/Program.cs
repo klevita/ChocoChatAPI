@@ -121,7 +121,7 @@ public class Coin : IEquatable<Coin>
     } }
 
 // Добавить функции
-//CreateUser(email, password, NickName) return (true\"error message")
+//+ CreateUser(email, password, NickName) return (true\"error message")
 //GetUser(email, password) return (User)
 //getUserPosts(userID) return ([Messages])
 //getUserForums(userID) return ([Forums])

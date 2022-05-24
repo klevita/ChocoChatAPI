@@ -27,7 +27,11 @@ namespace AnonChatAPI.Services
             await _usersCollection.Find(_ => true).ToListAsync();
 
         public async Task<User?> GetAsync(string id) =>
-            await _usersCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+            await _usersCollection.Find(x => x.Id == id ).FirstOrDefaultAsync();
+        public async Task<User?> GettAsync(string name) =>
+            await _usersCollection.Find(x => x.NickName == name).FirstOrDefaultAsync();
+
+
 
         public async Task CreateAsync(User newUser) =>
             await _usersCollection.InsertOneAsync(newUser);
