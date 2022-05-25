@@ -113,11 +113,12 @@ public class Coin : IEquatable<Coin>
 
     public class User
     {
-        public string Login { get; set; }
-        public string Email { get; set; }
-        public int Id { get; set; }
-        public bool FIO { get; set; }
-        public string Proffession_Name { get; set; }
+        public bool IsAdmin { get; set; }
+        public string NickName { get; set; } = null!;
+
+        public string Password { get; set; } = null!;
+
+        public string Email { get; set; } = null!;
     } }
 
 // Добавить функции

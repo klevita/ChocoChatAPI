@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace AnonChatAPI.Models    
 {
+    [BsonIgnoreExtraElements]
     public class User
     {
         [BsonId]
@@ -10,10 +11,12 @@ namespace AnonChatAPI.Models
         public string? Id { get; set; }
 
         [BsonElement("Name")]
+
+        public bool IsAdmin { get; set; }
         public string NickName { get; set; } = null!;
 
         public string Password { get; set; } = null!;
 
-        public bool IsAdmin { get; set; }
+        public string Email { get; set; } = null!;
     }
 }
