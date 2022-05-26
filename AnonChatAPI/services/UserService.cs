@@ -32,7 +32,10 @@ namespace AnonChatAPI.Services
             await _usersCollection.Find(x => x.NickName == name).FirstOrDefaultAsync();
         public async Task<User?> GetAsync3(string email, string password) =>
 			await _usersCollection.Find(x => x.Email == email && x.Password == password).FirstOrDefaultAsync();
-            
+        //public async Task<User?> GetAsyn4(string id) =>
+        //    await _usersCollection.Find(x => x.NickName == name).FirstOrDefaultAsync();
+
+
 
 
 

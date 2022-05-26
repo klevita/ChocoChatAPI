@@ -22,6 +22,7 @@ builder.Services.Configure<mushroomsDBSettings>(
     builder.Configuration.GetSection("mushrooms")
     );
 builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<ForumService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -119,11 +120,12 @@ public class Coin : IEquatable<Coin>
         public string Password { get; set; } = null!;
 
         public string Email { get; set; } = null!;
+        public string Date { get; set; } = null!;
     } }
 
 // Добавить функции
 //+ CreateUser(email, password, NickName) return (true\"error message")
-//GetUser(email, password) return (User)
+//+ GetUser(email, password) return (User)
 //getUserPosts(userID) return ([Messages])
 //getUserForums(userID) return ([Forums])
 //getAllForums() return ([Forums])

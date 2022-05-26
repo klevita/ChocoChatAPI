@@ -2,7 +2,7 @@
 using AnonChatAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace UserStoreApi.Controllers;
+namespace AnonChatAPI.Control;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -43,8 +43,9 @@ public class UserController : ControllerBase
 	[HttpPost]
     public async Task<IActionResult> Post(User newUser)
     {
+        string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+        newUser.Date = date;
         await _userService.CreateAsync(newUser);
-
         return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
     }
 

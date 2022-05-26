@@ -18,5 +18,7 @@ namespace AnonChatAPI.Models
         public string Password { get; set; } = null!;
 
         public string Email { get; set; } = null!;
+
+        public string Date { get; set; } = null!;
     }
 }
