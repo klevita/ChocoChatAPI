@@ -29,7 +29,19 @@ public class UserController : ControllerBase
 
         return user;
     }
-	[HttpGet("{email}/{password}")]
+    [HttpGet("{NickName}")]
+    public async Task<ActionResult<User>> GetByNickName(string NickName)
+    {
+        var user = await _userService.GetAsync2(NickName);
+
+        if (user is null)
+        {
+            return NotFound();
+        }
+
+        return user;
+    }
+    [HttpGet("{email}/{password}")]
 	public async Task<ActionResult<User>> GetUser(string email, string password)
 	{
 		var user = await _userService.GetAsync3(email, password);

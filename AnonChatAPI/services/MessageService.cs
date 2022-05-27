@@ -19,7 +19,22 @@ namespace AnonChatAPI.Services
 		}
 		public async Task<List<Message>> GetAsync() =>
 		   await _messagesCollection.Find(_ => true).ToListAsync();
+		public async Task<Message?> GetAsync1(string id) =>
+			await _messagesCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+
 		public async Task<List<Message>> GetAsync2(string id) =>
 			await _messagesCollection.Find(x => x.MessageU == id).ToListAsync();
+		public async Task<List<Message>> GetAsync3(string id) =>
+			await _messagesCollection.Find(x => x.MessageF == id).ToListAsync();
+		public long GetAsync4(string id) =>
+			_messagesCollection.Count(x => x.MessageF == id);
+
+
+		public async Task CreateAsync(Message newM) =>
+			await _messagesCollection.InsertOneAsync(newM);
+		public async Task UpdateAsync(string id, Message updatedM) =>
+		   await _messagesCollection.ReplaceOneAsync(x => x.Id == id, updatedM);
+		public async Task RemoveAsync(string id) =>
+			await _messagesCollection.DeleteOneAsync(x => x.Id == id);
 	}
 }

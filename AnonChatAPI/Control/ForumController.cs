@@ -40,4 +40,44 @@ public class ForumController : ControllerBase
 		var forums = await _forumService.GetAsync2(Tag);
 		return forums;
 	}
+    [HttpPost]
+    public async Task<IActionResult> Post(Forum newForum)
+    {
+        string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+        newForum.Date = date;
+        await _forumService.CreateAsync(newForum);
+        return CreatedAtAction(nameof(Get), new { id = newForum.Id }, newForum);
+    }
+
+    [HttpPut("{id:length(24)}")]
+    public async Task<IActionResult> Update(string id, Forum updatedForum)
+    {
+        var forum = await _forumService.GetAsync1(id);
+
+        if (forum is null)
+        {
+            return NotFound();
+        }
+
+        updatedForum.Id = forum.Id;
+
+        await _forumService.UpdateAsync(id, updatedForum);
+
+        return NoContent();
+    }
+
+    [HttpDelete("{id:length(24)}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var forum = await _forumService.GetAsync(id);
+
+        if (forum is null)
+        {
+            return NotFound();
+        }
+
+        await _forumService.RemoveAsync(id);
+
+        return NoContent();
+    }
 }
