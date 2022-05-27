@@ -17,9 +17,9 @@ public class ForumController : ControllerBase
 	public async Task<List<Forum>> Get() =>
 		await _forumService.GetAsync();
 	[HttpGet("{Name}")]
-	public async Task<ActionResult<Forum>> Get(string Name)
+	public async Task<ActionResult<Forum>> GetByName(string Name)
 	{
-		var forum = await _forumService.GetAsync(Name);
+		var forum = await _forumService.GetAsync3(Name);
 
 		if (forum is null)
 		{
@@ -27,5 +27,17 @@ public class ForumController : ControllerBase
 		}
 
 		return forum;
+	}
+	[HttpGet("{UserId:length(24)}/Creator")]
+	public async Task<List<Forum>> Get(string UserId)
+	{
+		var forum = await _forumService.GetAsync(UserId);
+		return forum;
+	}
+	[HttpGet("{Tag}/Tag")]
+	public async Task<List<Forum>> GetTagName(string Tag)
+	{
+		var forums = await _forumService.GetAsync2(Tag);
+		return forums;
 	}
 }

@@ -23,6 +23,7 @@ builder.Services.Configure<mushroomsDBSettings>(
     );
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<ForumService>();
+builder.Services.AddSingleton<MessageService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -127,6 +128,6 @@ public class Coin : IEquatable<Coin>
 //+ CreateUser(email, password, NickName) return (true\"error message")
 //+ GetUser(email, password) return (User)
 //getUserPosts(userID) return ([Messages])
-//getUserForums(userID) return ([Forums])
+//+ getUserForums(userID) return ([Forums])
 //getAllForums() return ([Forums])
 //getForumsByTag(TagName) return ([Forums])

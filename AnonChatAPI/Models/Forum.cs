@@ -3,7 +3,8 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace AnonChatAPI.Models
 {
-	public class Forum
+    [BsonIgnoreExtraElements]
+    public class Forum
 	{
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -16,7 +17,7 @@ namespace AnonChatAPI.Models
 
         public string Description { get; set; } = null!;
 
-        public string Tags { get; set; } = null!;
+        public string Tag { get; set; } = null!;
         public string Creator { get; set; } = null!;
     }
 }
