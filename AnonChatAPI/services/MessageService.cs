@@ -27,11 +27,17 @@ namespace AnonChatAPI.Services
 		public async Task<List<Message>> GetAsync3(string id) =>
 			await _messagesCollection.Find(x => x.MessageF == id).ToListAsync();
 		public long GetAsync4(string id) =>
-			_messagesCollection.Count(x => x.MessageF == id);
+			_messagesCollection.CountDocuments(x => x.MessageF == id);
 
 
-		public async Task CreateAsync(Message newM) =>
+		public async Task CreateAsync(Message newM)
+		{
+			//Message _newM = new Message();
+			//_newUser.Id = created.Id;
+			//return _newUser;
 			await _messagesCollection.InsertOneAsync(newM);
+		}
+
 		public async Task UpdateAsync(string id, Message updatedM) =>
 		   await _messagesCollection.ReplaceOneAsync(x => x.Id == id, updatedM);
 		public async Task RemoveAsync(string id) =>

@@ -13,34 +13,28 @@ public class ForumController : ControllerBase
 	public ForumController(ForumService forumService) =>
 		_forumService = forumService;
 
-	[HttpGet]
+	[HttpGet("GetAllForums")]
 	public async Task<List<Forum>> Get() =>
 		await _forumService.GetAsync();
-	[HttpGet("{Name}")]
-	public async Task<ActionResult<Forum>> GetByName(string Name)
+	[HttpGet("GetForumBy/{Name}")]
+	public async Task<List<Forum>> GetByName(string Name)
 	{
 		var forum = await _forumService.GetAsync3(Name);
-
-		if (forum is null)
-		{
-			return NotFound();
-		}
-
 		return forum;
 	}
-	[HttpGet("{UserId:length(24)}/Creator")]
+	[HttpGet("GetForumsCreatedBy/{UserId:length(24)}")]
 	public async Task<List<Forum>> Get(string UserId)
 	{
 		var forum = await _forumService.GetAsync(UserId);
 		return forum;
 	}
-	[HttpGet("{Tag}/Tag")]
+	[HttpGet("GetForumsByTag/{Tag}")]
 	public async Task<List<Forum>> GetTagName(string Tag)
 	{
-		var forums = await _forumService.GetAsync2(Tag);
+        var forums = await _forumService.GetAsync2(Tag);
 		return forums;
 	}
-    [HttpPost]
+	[HttpPost("CreateForum")]
     public async Task<IActionResult> Post(Forum newForum)
     {
         string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
@@ -49,7 +43,7 @@ public class ForumController : ControllerBase
         return CreatedAtAction(nameof(Get), new { id = newForum.Id }, newForum);
     }
 
-    [HttpPut("{id:length(24)}")]
+    [HttpPut("ModifyForumBy/{id:length(24)}")]
     public async Task<IActionResult> Update(string id, Forum updatedForum)
     {
         var forum = await _forumService.GetAsync1(id);
@@ -66,7 +60,7 @@ public class ForumController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("{id:length(24)}")]
+    [HttpDelete("DeleteForumBy/{id:length(24)}")]
     public async Task<IActionResult> Delete(string id)
     {
         var forum = await _forumService.GetAsync(id);

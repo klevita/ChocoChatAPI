@@ -13,11 +13,11 @@ public class UserController : ControllerBase
     public UserController(UserService userService) =>
         _userService = userService;
 
-    [HttpGet]
+    [HttpGet("GetAllUsers")]
     public async Task<List<User>> Get() =>
         await _userService.GetAsync();
 
-    [HttpGet("{id:length(24)}")]
+    [HttpGet("GetUserBy/{id:length(24)}")]
     public async Task<ActionResult<User>> Get(string id)
     {
         var user = await _userService.GetAsync(id);
@@ -29,7 +29,7 @@ public class UserController : ControllerBase
 
         return user;
     }
-    [HttpGet("{NickName}")]
+    [HttpGet("GetUserBy/{NickName}")]
     public async Task<ActionResult<User>> GetByNickName(string NickName)
     {
         var user = await _userService.GetAsync2(NickName);
@@ -41,7 +41,7 @@ public class UserController : ControllerBase
 
         return user;
     }
-    [HttpGet("{email}/{password}")]
+    [HttpGet("GetUserBy/{email}/{password}")]
 	public async Task<ActionResult<User>> GetUser(string email, string password)
 	{
 		var user = await _userService.GetAsync3(email, password);
@@ -52,16 +52,18 @@ public class UserController : ControllerBase
 		return user;
 	}
 
-	[HttpPost]
-    public async Task<IActionResult> Post(User newUser)
-    {
-        string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
-        newUser.Date = date;
-        await _userService.CreateAsync(newUser);
-        return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
+    [HttpPost("CreateUser")]
+    public async Task<IActionResult> Post(UserRegistration newUser)
+    {        
+        User _newUser = await _userService.CreateAsync(newUser);
+  //      if(_newUser == null)
+		//{
+  //          return BadRequest("Such user already exists");
+		//}
+        return CreatedAtAction(nameof(Get), new { id = _newUser.Id }, _newUser);
     }
 
-    [HttpPut("{id:length(24)}")]
+    [HttpPut("ModifyUserBy/{id:length(24)}")]
     public async Task<IActionResult> Update(string id, User updatedUser)
     {
         var user = await _userService.GetAsync(id);
@@ -78,7 +80,7 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("{id:length(24)}")]
+    [HttpDelete("DeleteUserBy/{id:length(24)}")]
     public async Task<IActionResult> Delete(string id)
     {
         var user = await _userService.GetAsync(id);

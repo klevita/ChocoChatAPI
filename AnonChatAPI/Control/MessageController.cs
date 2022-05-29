@@ -13,36 +13,34 @@ public class MessageController : ControllerBase
     public MessageController(MessageService messageService) =>
         _messageService = messageService;
 
-    [HttpGet]
+    [HttpGet("GetAllMessages")]
     public async Task<List<Message>> Get() =>
         await _messageService.GetAsync();
-    [HttpGet("{UserId:length(24)}/CreatorId")]
+    [HttpGet("GetUserMessagesBy/{UserId:length(24)}")]
     public async Task<List<Message>> GetByUserId(string UserId)
     {
         var messages = await _messageService.GetAsync2(UserId);
         return messages;
     }
-    [HttpGet("{ForumId:length(24)}/ForumId")]
+    [HttpGet("GetForumMessagesBy/{ForumId:length(24)}")]
     public async Task<List<Message>> GetByForumId(string ForumId)
     {
         var messages = await _messageService.GetAsync3(ForumId);
         return messages;
     }
-	[HttpGet("{ForumId:length(24)}/MessagesQuantity")]
+	[HttpGet("GetMessagesQuantityBy/{ForumId:length(24)}")]
 	public string GetMQ(string ForumId)
 	{
 		var messages = _messageService.GetAsync4(ForumId);
 		return messages.ToString(); 
 	}
-	[HttpPost]
+	[HttpPost("CreateMessage")]
 	public async Task<IActionResult> Post(Message newM)
-	{
-		string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
-		newM.Date = date;
+	{		
 		await _messageService.CreateAsync(newM);
 		return CreatedAtAction(nameof(Get), new { id = newM.Id }, newM);
 	}
-	[HttpPut("{id:length(24)}")]
+	[HttpPut("ModifyMessageBy/{id:length(24)}")]
 	public async Task<IActionResult> Update(string id, Message updatedM)
 	{
 		var message = await _messageService.GetAsync1(id);
@@ -58,7 +56,7 @@ public class MessageController : ControllerBase
 		return NoContent();
 	}
 
-	[HttpDelete("{id:length(24)}")]
+	[HttpDelete("DeleteMessageBy/{id:length(24)}")]
 	public async Task<IActionResult> Delete(string id)
 	{
 		var message = await _messageService.GetAsync2(id);

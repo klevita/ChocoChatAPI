@@ -33,8 +33,26 @@ namespace AnonChatAPI.Services
         public async Task<User?> GetAsync3(string email, string password) =>
 			await _usersCollection.Find(x => x.Email == email && x.Password == password).FirstOrDefaultAsync(); 
 
-        public async Task CreateAsync(User newUser) =>
-            await _usersCollection.InsertOneAsync(newUser);
+        public async Task<User?> CreateAsync(UserRegistration newUser)
+		{
+			//User abuser = await _usersCollection.Find(user => user.NickName == newUser.NickName || user.Email == newUser.Email).FirstOrDefaultAsync();
+			//if (abuser.NickName == newUser.NickName || abuser.Email == newUser.Email)
+			//{
+			//	return null;
+			//}
+			User _newUser = new User();
+            _newUser.NickName = newUser.NickName;
+            _newUser.Email = newUser.Email;
+            _newUser.Password = newUser.Password;
+            _newUser.Date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+            _newUser.IsAdmin = false;           
+            await _usersCollection.InsertOneAsync(_newUser);
+            User created = await _usersCollection.Find(x => x.NickName == _newUser.NickName).FirstOrDefaultAsync();
+            _newUser.Id = created.Id; 
+            return _newUser;
+        }
+
+            
 
         public async Task UpdateAsync(string id, User updatedUser) =>
             await _usersCollection.ReplaceOneAsync(x => x.Id == id, updatedUser);

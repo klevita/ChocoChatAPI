@@ -3,7 +3,6 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace AnonChatAPI.Models
 {
-	[BsonIgnoreExtraElements]
 	public class Tag
 	{
 		[BsonId]
