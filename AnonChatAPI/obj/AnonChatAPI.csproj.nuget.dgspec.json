@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {}
+    "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {
+    "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+        "projectUniqueName": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
         "projectName": "AnonChatAPI",
-        "projectPath": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
-        "packagesPath": "C:\\Users\\djeda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\djeda\\ChocoChatAPI\\AnonChatAPI\\obj\\",
+        "projectPath": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+        "packagesPath": "C:\\Users\\slava\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\djeda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\slava\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -41,7 +41,7 @@ namespace AnonChatAPI.Services
 			_newM.MessageU = newM.MessageU;
 			_newM.MessageF = newM.MessageF;
 			_newM.Content = newM.Content;
-			_newM.Date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+			_newM.Date = DateTime.UtcNow.ToString("MM-dd-yyyy hh:mm:ss tt");
 			await _messagesCollection.InsertOneAsync(_newM);
 			Message created = await _messagesCollection.Find(x => x.MessageF == _newM.MessageF && x.MessageU == _newM.MessageU && x.Content == _newM.Content).FirstOrDefaultAsync();
 			_newM.Id = created.Id;
