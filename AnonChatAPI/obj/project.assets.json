@@ -908,19 +908,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\slava\\.nuget\\packages\\": {}
+    "C:\\Users\\klevi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+      "projectUniqueName": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
       "projectName": "AnonChatAPI",
-      "projectPath": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
-      "packagesPath": "C:\\Users\\slava\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\slava\\sharp_proj\\ChocoChatAPI\\AnonChatAPI\\obj\\",
+      "projectPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\ChocoChatAPI\\AnonChatAPI\\AnonChatAPI.csproj",
+      "packagesPath": "C:\\Users\\klevi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\klevi\\source\\repos\\AnonChatAPI\\ChocoChatAPI\\AnonChatAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\slava\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\klevi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
