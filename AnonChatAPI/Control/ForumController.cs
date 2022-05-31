@@ -16,7 +16,13 @@ public class ForumController : ControllerBase
 	[HttpGet("GetAllForums")]
 	public async Task<List<Forum>> Get() =>
 		await _forumService.GetAsync();
-	[HttpGet("GetForumBy/{Name}")]
+    [HttpGet("GetForumBy/{Id:length(24)}")]
+    public async Task<Forum> GetById(string Id)
+    {
+        var forum = await _forumService.GetAsync4(Id);
+        return forum;
+    }
+    [HttpGet("GetForumBy/{Name}")]
 	public async Task<List<Forum>> GetByName(string Name)
 	{
 		var forum = await _forumService.GetAsync3(Name);

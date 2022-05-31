@@ -44,6 +44,10 @@ namespace AnonChatAPI.Services
 		public async Task<List<Forum>> GetAsync3(string name) =>
 			await _forumsCollection.Find(x => x.Name == name).ToListAsync();
 
+		public async Task<Forum> GetAsync4(string id) =>
+			await _forumsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+
+
 		public async Task<Forum> CreateAsync(ForumCreation newF)
 		{
 			Forum ex = await _forumsCollection.Find(f => f.Name == newF.Name).FirstOrDefaultAsync();
@@ -58,6 +62,7 @@ namespace AnonChatAPI.Services
 			newForum.Date = DateTime.UtcNow.ToString("MM-dd-yyyy");
 			await _forumsCollection.InsertOneAsync(newForum);
 			return newForum;
+
 		}			
 		public async Task UpdateAsync(string id, Forum updatedF) =>
 		   await _forumsCollection.ReplaceOneAsync(x => x.Id == id, updatedF);
