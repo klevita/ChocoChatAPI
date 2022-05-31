@@ -44,8 +44,21 @@ namespace AnonChatAPI.Services
 		public async Task<List<Forum>> GetAsync3(string name) =>
 			await _forumsCollection.Find(x => x.Name == name).ToListAsync();
 
-		public async Task CreateAsync(Forum newF) =>
-			await _forumsCollection.InsertOneAsync(newF);
+		public async Task<Forum> CreateAsync(ForumCreation newF)
+		{
+			Forum ex = await _forumsCollection.Find(f => f.Name == newF.Name).FirstOrDefaultAsync();
+			if (ex != null)
+				if (ex.Name == newF.Name)
+					return null;
+			Forum newForum = new Forum();
+			newForum.Creator = newF.Creator;
+			newForum.Name = newF.Name;
+			newForum.Tags = newF.Tags;
+			newForum.Description = newF.Description;
+			newForum.Date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+			await _forumsCollection.InsertOneAsync(newForum);
+			return newForum;
+		}			
 		public async Task UpdateAsync(string id, Forum updatedF) =>
 		   await _forumsCollection.ReplaceOneAsync(x => x.Id == id, updatedF);
 		public async Task RemoveAsync(string id) =>

@@ -35,11 +35,10 @@ namespace AnonChatAPI.Services
 
         public async Task<User?> CreateAsync(UserRegistration newUser)
 		{
-			//User abuser = await _usersCollection.Find(user => user.NickName == newUser.NickName || user.Email == newUser.Email).FirstOrDefaultAsync();
-			//if (abuser.NickName == newUser.NickName || abuser.Email == newUser.Email)
-			//{
-			//	return null;
-			//}
+			User abuser = await _usersCollection.Find(user => user.NickName == newUser.NickName || user.Email == newUser.Email).FirstOrDefaultAsync();
+			if (abuser!=null)			
+                if(abuser.NickName == newUser.NickName || abuser.Email == newUser.Email)
+				    return null;			                       
 			User _newUser = new User();
             _newUser.NickName = newUser.NickName;
             _newUser.Email = newUser.Email;

@@ -56,11 +56,11 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Post(UserRegistration newUser)
     {        
         User _newUser = await _userService.CreateAsync(newUser);
-  //      if(_newUser == null)
-		//{
-  //          return BadRequest("Such user already exists");
-		//}
-        return CreatedAtAction(nameof(Get), new { id = _newUser.Id }, _newUser);
+		if (_newUser == null)
+		{
+			return BadRequest("User's name or email is already taken");
+		}
+		return CreatedAtAction(nameof(Get), new { id = _newUser.Id }, _newUser);
     }
 
     [HttpPut("ModifyUserBy/{id:length(24)}")]

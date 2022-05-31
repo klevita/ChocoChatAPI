@@ -35,10 +35,10 @@ public class MessageController : ControllerBase
 		return messages.ToString(); 
 	}
 	[HttpPost("CreateMessage")]
-	public async Task<IActionResult> Post(Message newM)
+	public async Task<IActionResult> Post(MessageCreation newM)
 	{		
-		await _messageService.CreateAsync(newM);
-		return CreatedAtAction(nameof(Get), new { id = newM.Id }, newM);
+		Message mes = await _messageService.CreateAsync(newM);
+		return CreatedAtAction(nameof(Get), new { id = mes.Id }, newM);
 	}
 	[HttpPut("ModifyMessageBy/{id:length(24)}")]
 	public async Task<IActionResult> Update(string id, Message updatedM)

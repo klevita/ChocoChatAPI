@@ -10,10 +10,7 @@ namespace AnonChatAPI.Models
 		public string MessageF { get; set; } = null!;
 
 		[BsonElement("Content")]
-		public string Content { get; set; } = null!;
-
-		[BsonElement("Date")]
-		public string Date { get; set; } = null!;
+		public string Content { get; set; } = null!;		
 
 		[BsonElement("MessageU")]
 		[BsonRepresentation(BsonType.ObjectId)]

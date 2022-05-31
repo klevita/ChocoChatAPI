@@ -7,6 +7,7 @@ namespace AnonChatAPI.Services
 	public class MessageService
 	{
 		private readonly IMongoCollection<Message> _messagesCollection;
+		private readonly IMongoCollection<Message> _usersCollection;
 		public MessageService(
 			IOptions<mushroomsDBSettings> messageStoreDatabaseSettings)
 		{
@@ -15,7 +16,7 @@ namespace AnonChatAPI.Services
 			var mongoDatabase = mongoClient.GetDatabase(
 				messageStoreDatabaseSettings.Value.DatabaseName);
 			_messagesCollection = mongoDatabase.GetCollection<Message>(
-				messageStoreDatabaseSettings.Value.MessagesCollectionName);
+				messageStoreDatabaseSettings.Value.MessagesCollectionName);			
 		}
 		public async Task<List<Message>> GetAsync() =>
 		   await _messagesCollection.Find(_ => true).ToListAsync();
@@ -30,12 +31,21 @@ namespace AnonChatAPI.Services
 			_messagesCollection.CountDocuments(x => x.MessageF == id);
 
 
-		public async Task CreateAsync(Message newM)
+		public async Task<Message> CreateAsync(MessageCreation newM)
 		{
-			//Message _newM = new Message();
-			//_newUser.Id = created.Id;
-			//return _newUser;
-			await _messagesCollection.InsertOneAsync(newM);
+			//User abuser = await _usersCollection.Find(message => message).FirstOrDefaultAsync();
+			//if (abuser != null)
+			//	if (abuser.NickName == newUser.NickName || abuser.Email == newUser.Email)
+			//		return null;
+			Message _newM = new Message();			
+			_newM.MessageU = newM.MessageU;
+			_newM.MessageF = newM.MessageF;
+			_newM.Content = newM.Content;
+			_newM.Date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+			await _messagesCollection.InsertOneAsync(_newM);
+			Message created = await _messagesCollection.Find(x => x.MessageF == _newM.MessageF && x.MessageU == _newM.MessageU && x.Content == _newM.Content).FirstOrDefaultAsync();
+			_newM.Id = created.Id;
+			return _newM;
 		}
 
 		public async Task UpdateAsync(string id, Message updatedM) =>

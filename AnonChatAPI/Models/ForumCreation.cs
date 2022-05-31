@@ -1,20 +1,13 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace AnonChatAPI.Models
 {
-    public class Forum
+    public class ForumCreation
     {
-
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
-
         [BsonElement("Name")]
         public string Name { get; set; } = null!;
-
-        [BsonElement("Date")]
-        public string Date { get; set; } = null!;
 
         [BsonElement("Description")]
         public string Description { get; set; } = null!;

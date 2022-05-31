@@ -35,12 +35,14 @@ public class ForumController : ControllerBase
 		return forums;
 	}
 	[HttpPost("CreateForum")]
-    public async Task<IActionResult> Post(Forum newForum)
-    {
-        string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
-        newForum.Date = date;
-        await _forumService.CreateAsync(newForum);
-        return CreatedAtAction(nameof(Get), new { id = newForum.Id }, newForum);
+    public async Task<IActionResult> Post(ForumCreation newForum)
+    {              
+        Forum forum = await _forumService.CreateAsync(newForum);
+        if(forum == null)
+		{
+            return BadRequest("Forum's name already taken");
+        }
+        return CreatedAtAction(nameof(Get), new { id = forum.Id }, forum);
     }
 
     [HttpPut("ModifyForumBy/{id:length(24)}")]
